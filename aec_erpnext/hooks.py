@@ -11,7 +11,7 @@ app_color = "grey"
 app_email = "kmanoj@makwiz.com"
 app_license = "MIT"
 
-fixtures = ["Custom Field","Custom Script","Print Format","Property Setter"]
+fixtures = ["Custom Field","Custom Script","Print Format"]
 # Includes in <head>
 # ------------------
 

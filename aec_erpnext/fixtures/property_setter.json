@@ -979,7 +979,7 @@
   "doctype": "Property Setter", 
   "doctype_or_field": "DocType", 
   "field_name": null, 
-  "modified": "2017-05-28 20:45:38.945523", 
+  "modified": "2017-05-30 19:51:36.243568", 
   "name": "Purchase Order-read_only_onload", 
   "property": "read_only_onload", 
   "property_type": "Check", 
