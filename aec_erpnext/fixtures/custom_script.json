@@ -1,1 +1,11 @@
-[]
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Purchase Order", 
+  "modified": "2017-06-13 17:11:50.141858", 
+  "name": "Purchase Order-Client", 
+  "script": "frappe.ui.form.on(\"Purchase Order\", {\n    before_submit: function(frm) {\t\t\n\tmyval=frm.doc.name;\n\tfirst_index=myval.indexOf(\"-\")+1;\n\tsss=myval.substr(first_index,20);\n\tsec_index = sss.lastIndexOf(\"-\");\t\n\tif (sec_index > 0){\n\t\tamd_no = frm.doc.name.substr(first_index+sec_index+1,10);\t\n\t}\n\telse {\n\t\tamd_no = 0;\n\t}\n\tfrm.set_value(\"makwiz_amd_no\", amd_no);\t\n\tif (frm.doc.makwiz_amd_no > 0) {\n\t\tamd_date = frappe.datetime.nowdate();\t\n\t\tfrm.set_value(\"makwiz_amd_date\", amd_date);\n\t}\n\tfrm.refresh_fields(\"makwiz_amd_no\");\n\tfrm.refresh_fields(\"makwiz_amd_date\");\t\t\n\t}\n});", 
+  "script_type": "Client"
+ }
+]
