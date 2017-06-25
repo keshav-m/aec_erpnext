@@ -79,13 +79,11 @@ fixtures = ["Custom Field","Custom Script","Print Format"]
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Purchase Receipt": {
+	"validate": "aec_erpnext.hooks_call.purchase_receipt.validate_custom_item"
+	},
+}
 
 # Scheduled Tasks
 # ---------------
