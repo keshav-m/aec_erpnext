@@ -83,6 +83,9 @@ doc_events = {
 	"Purchase Receipt": {
 	"validate": "aec_erpnext.hooks_call.purchase_receipt.validate_custom_item"
 	},
+	"Item": {
+	"before_save": "aec_erpnext.hooks_call.item.populate_item_code"
+	},
 }
 
 # Scheduled Tasks
