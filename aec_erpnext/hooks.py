@@ -86,6 +86,9 @@ doc_events = {
 	"Item": {
 	"autoname": "aec_erpnext.hooks_call.item.populate_item_code"
 	},
+	"Purchase Order": {
+	"validate": "aec_erpnext.hooks_call.purchase_order.populate_item_tax"
+	}
 }
 
 # Scheduled Tasks
