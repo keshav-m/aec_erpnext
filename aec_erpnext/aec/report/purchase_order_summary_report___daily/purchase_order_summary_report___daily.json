@@ -1,0 +1,31 @@
+{
+ "add_total_row": 0, 
+ "apply_user_permissions": 1, 
+ "creation": "2017-09-09 17:47:39.075038", 
+ "disabled": 0, 
+ "docstatus": 0, 
+ "doctype": "Report", 
+ "idx": 0, 
+ "is_standard": "Yes", 
+ "letter_head": "AEC", 
+ "modified": "2017-09-09 17:53:02.166537", 
+ "modified_by": "Administrator", 
+ "module": "AEC", 
+ "name": "Purchase Order Summary Report - Daily", 
+ "owner": "Administrator", 
+ "query": "SELECT `tabPurchase Order`.`transaction_date` as \"Transaction Date:Date:180\", \ncount(`tabPurchase Order`.`name`) as \"Total Purchase Order::180\", \nsum(`tabPurchase Order`.`base_rounded_total`) as \"Total Amount:float:180\"\nFROM `tabPurchase Order` \nwhere  `tabPurchase Order`.docstatus = 1\nand `tabPurchase Order`.status not in (\"Stopped\", \"Closed\")\nand `tabPurchase Order`.company = %(company)s\nand  `tabPurchase Order`.transaction_date = %(date)s\ngroup by  transaction_date;", 
+ "ref_doctype": "Purchase Order", 
+ "report_name": "Purchase Order Summary Report - Daily", 
+ "report_type": "Query Report", 
+ "roles": [
+  {
+   "role": "Stock User"
+  }, 
+  {
+   "role": "Purchase Manager"
+  }, 
+  {
+   "role": "Purchase User"
+  }
+ ]
+}
